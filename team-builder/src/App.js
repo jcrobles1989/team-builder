@@ -4,8 +4,8 @@ import './App.css';
 import Form from './Components/Form';
 
 const initialTeamMembers = [
-  {firstName: 'John', lastName: 'Smith'},
-  {firstName: 'Jane', lastName: 'Doe'}
+  {firstName: 'John', lastName: 'Smith', email: 'johnsmith@gmail.com', role: 'Team Lead'},
+  {firstName: 'Jane', lastName: 'Doe', email: 'janedoe@gmail.com', role: 'Project Lead'}
 ]
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
     <div className="App">
       
       <h1>Team Members:</h1>
-  {teamMembers.map(item => <h3 key={item.id}>{item.firstName} {item.lastName} {item.email} {item.role}</h3>)}
+  {teamMembers.map(item => <p key={item.id}>Name: {item.firstName} {item.lastName} Email: {item.email} Role: {item.role}</p>)}
         
       <Form 
         onInputChange={onInputChange}
