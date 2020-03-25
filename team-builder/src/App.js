@@ -27,14 +27,12 @@ function App() {
   const onFormSubmit = event => {
     event.preventDefault()
     const newTeamMember = {
-      // id: uuid(),
       firstName: formValues.firstName,
       lastName: formValues.lastName,
       email: formValues.email,
       role: formValues.role
     }
     setTeamMembers([...teamMembers, newTeamMember])
-    // setTeamMembers(teamMembers.concat(newTeamMember))
   }
 
   return (
